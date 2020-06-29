@@ -14,9 +14,28 @@ import Colors from '../../constants/colors';
 
 const StartGameScreen: FC = () => {
   const [enteredValue, setEnteredValue] = useState<string>('');
+  const [confirmed, setConfirmed] = useState<boolean>(false);
+  const [selectedNumber, setSelectedNumber] = useState<number>();
 
   const numberInputHandler = (inputText: string): void => {
     setEnteredValue(inputText.replace(/[^0-9]/g, ''));
+  };
+
+  const resetInputHandler = (): void => {
+    setEnteredValue('');
+    setConfirmed(false);
+  };
+
+  const confirmInputHandler = (): void => {
+    const chosenNumber: number = parseInt(enteredValue);
+
+    if (chosenNumber <= 0 || chosenNumber > 99) {
+      return;
+    }
+
+    setConfirmed(true);
+    setSelectedNumber(chosenNumber);
+    setEnteredValue('');
   };
 
   return (
@@ -36,8 +55,16 @@ const StartGameScreen: FC = () => {
             value={enteredValue}
           />
           <View style={styles.buttonContainer}>
-            <Button title="Reset" onPress={() => {}} color={Colors.accent} />
-            <Button title="Confirm" onPress={() => {}} color={Colors.primary} />
+            <Button
+              title="Reset"
+              onPress={resetInputHandler}
+              color={Colors.accent}
+            />
+            <Button
+              title="Confirm"
+              onPress={confirmInputHandler}
+              color={Colors.primary}
+            />
           </View>
         </Card>
       </View>
