@@ -7,4 +7,6 @@ export interface InputProps {
   autoCorrect: boolean;
   keyboardType: any;
   maxLength: number;
+  onChangeText: (inputText: string) => void;
+  value: string;
 }

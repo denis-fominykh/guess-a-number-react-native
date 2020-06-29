@@ -10,6 +10,8 @@ const Input: FC<InputProps> = ({
   autoCorrect,
   keyboardType,
   maxLength,
+  onChangeText,
+  value,
 }) => {
   return (
     <TextInput
@@ -19,6 +21,8 @@ const Input: FC<InputProps> = ({
       autoCorrect={autoCorrect}
       keyboardType={keyboardType}
       maxLength={maxLength}
+      onChangeText={onChangeText}
+      value={value}
     />
   );
 };
