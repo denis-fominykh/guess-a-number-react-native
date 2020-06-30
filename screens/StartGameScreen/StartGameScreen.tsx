@@ -5,6 +5,7 @@ import {
   Button,
   TouchableWithoutFeedback,
   Keyboard,
+  Alert,
 } from 'react-native';
 
 import styles from './StartGameScreenStyle';
@@ -30,7 +31,12 @@ const StartGameScreen: FC = () => {
   const confirmInputHandler = (): void => {
     const chosenNumber: number = parseInt(enteredValue);
 
-    if (chosenNumber <= 0 || chosenNumber > 99) {
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
+      Alert.alert(
+        'Invalid number!',
+        'Number has to be a number between 1 to 99.',
+        [{ text: 'Okay', style: 'destructive', onPress: resetInputHandler }],
+      );
       return;
     }
 
