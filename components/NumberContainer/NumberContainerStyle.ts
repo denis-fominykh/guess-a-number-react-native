@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   number: {
     color: Color.accent,
     fontSize: 22,
-  }
+  },
 });
 
 export default styles;

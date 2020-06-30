@@ -11,6 +11,6 @@ const NumberContainer: FC<NumberContainerProps> = ({ children }) => {
       <Text style={styles.number}>{children}</Text>
     </View>
   );
-}
+};
 
 export default NumberContainer;

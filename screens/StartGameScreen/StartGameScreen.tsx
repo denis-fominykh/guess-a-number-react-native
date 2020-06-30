@@ -10,12 +10,13 @@ import {
 
 import styles from './StartGameScreenStyle';
 
+import { StartGameScreenProps } from './StartGameScreenInterfaces';
 import Card from '../../components/Card';
 import Input from '../../components/Input';
 import NumberContainer from '../../components/NumberContainer';
 import Colors from '../../constants/colors';
 
-const StartGameScreen: FC = () => {
+const StartGameScreen: FC<StartGameScreenProps> = ({ onStartGame }) => {
   const [enteredValue, setEnteredValue] = useState<string>('');
   const [confirmed, setConfirmed] = useState<boolean>(false);
   const [selectedNumber, setSelectedNumber] = useState<number>();
@@ -47,13 +48,17 @@ const StartGameScreen: FC = () => {
     Keyboard.dismiss();
   };
 
-  const confirmedOutput = confirmed ? (
-    <Card style={styles.summaryContainer}>
-      <Text>You selected</Text>
-      <NumberContainer>{selectedNumber}</NumberContainer>
-      <Button title="START GAME" onPress={() => {}}/>
-    </Card>
-  ) : null;
+  const confirmedOutput =
+    confirmed && selectedNumber ? (
+      <Card style={styles.summaryContainer}>
+        <Text>You selected</Text>
+        <NumberContainer>{selectedNumber}</NumberContainer>
+        <Button
+          title="START GAME"
+          onPress={() => onStartGame(selectedNumber)}
+        />
+      </Card>
+    ) : null;
 
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
