@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import { StyleSheet, TextInput } from 'react-native';
+import { TextInput } from 'react-native';
+
+import styles from './InputStyle';
 
 import { InputProps } from './InputInterfaces';
 
@@ -26,14 +28,5 @@ const Input: FC<InputProps> = ({
     />
   );
 };
-
-const styles = StyleSheet.create({
-  input: {
-    height: 30,
-    borderBottomColor: 'grey',
-    borderBottomWidth: 1,
-    marginVertical: 10,
-  },
-});
 
 export default Input;

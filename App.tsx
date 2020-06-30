@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+
+import styles from './AppStyle';
 
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
@@ -14,11 +16,5 @@ const App: FC = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-});
 
 export default App;

@@ -1,12 +1,13 @@
 import React, { FC, useState } from 'react';
 import {
-  StyleSheet,
   View,
   Text,
   Button,
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
+
+import styles from './StartGameScreenStyle';
 
 import Card from '../../components/Card';
 import Input from '../../components/Input';
@@ -71,32 +72,5 @@ const StartGameScreen: FC = () => {
     </TouchableWithoutFeedback>
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    padding: 10,
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 20,
-    marginVertical: 10,
-  },
-  inputContainer: {
-    width: 300,
-    maxWidth: '80%',
-    alignItems: 'center',
-  },
-  input: {
-    width: 50,
-    textAlign: 'center',
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    width: '100%',
-    justifyContent: 'space-between',
-    paddingHorizontal: 15,
-  },
-});
 
 export default StartGameScreen;
