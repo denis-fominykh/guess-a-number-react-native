@@ -5,8 +5,8 @@ import styles from './CardStyle';
 
 import { CardProps } from './CardInterfaces';
 
-const Card: FC<CardProps> = ({ children, containerStyle }) => {
-  return <View style={{ ...styles.card, ...containerStyle }}>{children}</View>;
+const Card: FC<CardProps> = ({ children, style }) => {
+  return <View style={{ ...styles.card, ...style }}>{children}</View>;
 };
 
 export default Card;

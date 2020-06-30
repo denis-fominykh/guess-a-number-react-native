@@ -45,11 +45,20 @@ const StartGameScreen: FC = () => {
     setEnteredValue('');
   };
 
+  const confirmedOutput = confirmed ? (
+    <Card style={styles.summaryContainer}>
+      <Text>You selected</Text>
+      <View>
+        <Text>{selectedNumber}</Text>
+      </View>
+    </Card>
+  ) : null;
+
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.screen}>
         <Text style={styles.title}>Start a New Game!</Text>
-        <Card containerStyle={styles.inputContainer}>
+        <Card style={styles.inputContainer}>
           <Text>Select a number</Text>
           <Input
             inputStyle={styles.input}
@@ -74,6 +83,7 @@ const StartGameScreen: FC = () => {
             />
           </View>
         </Card>
+        {confirmedOutput}
       </View>
     </TouchableWithoutFeedback>
   );
