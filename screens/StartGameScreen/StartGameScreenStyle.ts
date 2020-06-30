@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   },
   summaryContainer: {
     marginTop: 20,
+    alignItems: 'center',
   },
 });
 
