@@ -1,9 +1,11 @@
 import React, { FC, useState } from 'react';
 import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { AppLoading } from 'expo';
 
 import styles from './AppStyle';
 
+import { fetchFonts } from './services/fetchFonts';
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
@@ -12,6 +14,7 @@ import GameOverScreen from './screens/GameOverScreen';
 const App: FC = () => {
   const [userNumber, setUserNumber] = useState<number | null>(null);
   const [guessRounds, setGuessRounds] = useState<number>(0);
+  const [dataLoaded, setDataLoaded] = useState<boolean>(false);
 
   const configureNewGameHandler = (): void => {
     setGuessRounds(0);
@@ -32,6 +35,16 @@ const App: FC = () => {
     content = <GameScreen userChoice={userNumber} onGameOver={gameOverHandler} />;
   } else if (guessRounds > 0) {
     content = <GameOverScreen rounds={guessRounds} userNumber={userNumber} onRestart={configureNewGameHandler} />;
+  }
+
+  if (!dataLoaded) {
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setDataLoaded(true)}
+        onError={(error: Error) => console.log(error)}
+      />
+    );
   }
 
   return (
