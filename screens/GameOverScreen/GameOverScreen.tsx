@@ -14,9 +14,12 @@ const GameOverScreen: FC<GameOverScreenProps> = ({
 }) => {
   return (
     <View style={styles.screen}>
-      <TitleText >The Game is over!</TitleText>
+      <TitleText>The Game is over!</TitleText>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={require('../../assets/success.png')} />
+        <Image
+          style={styles.image}
+          source={require('../../assets/success.png')}
+        />
       </View>
       <BodyText>Rounds: {rounds}</BodyText>
       <BodyText>The number was: {userNumber}</BodyText>
