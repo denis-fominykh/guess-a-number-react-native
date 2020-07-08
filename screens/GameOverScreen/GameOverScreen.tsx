@@ -1,9 +1,11 @@
 import React, { FC } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Button, Image } from 'react-native';
 
 import styles from './GameOverScreenStyle';
 
 import { GameOverScreenProps } from './GameOverScreenInterfaces';
+import TitleText from '../../components/TitleText';
+import BodyText from '../../components/BodyText';
 
 const GameOverScreen: FC<GameOverScreenProps> = ({
   rounds,
@@ -12,9 +14,12 @@ const GameOverScreen: FC<GameOverScreenProps> = ({
 }) => {
   return (
     <View style={styles.screen}>
-      <Text>The Game is over!</Text>
-      <Text>Rounds: {rounds}</Text>
-      <Text>The number was: {userNumber}</Text>
+      <TitleText >The Game is over!</TitleText>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={require('../../assets/success.png')} />
+      </View>
+      <BodyText>Rounds: {rounds}</BodyText>
+      <BodyText>The number was: {userNumber}</BodyText>
       <Button title="NEW GAME" onPress={onRestart} />
     </View>
   );

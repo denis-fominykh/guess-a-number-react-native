@@ -6,6 +6,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imageContainer: {
+    width: 300,
+    height: 300,
+    borderRadius: 200,
+    borderWidth: 3,
+    borderColor: 'black',
+    overflow: 'hidden',
+    marginVertical: 30,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+  },
 });
 
 export default styles;
