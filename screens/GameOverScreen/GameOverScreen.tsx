@@ -5,7 +5,11 @@ import styles from './GameOverScreenStyle';
 
 import { GameOverScreenProps } from './GameOverScreenInterfaces';
 
-const GameOverScreen: FC<GameOverScreenProps> = ({ rounds, userNumber, onRestart }) => {
+const GameOverScreen: FC<GameOverScreenProps> = ({
+  rounds,
+  userNumber,
+  onRestart,
+}) => {
   return (
     <View style={styles.screen}>
       <Text>The Game is over!</Text>

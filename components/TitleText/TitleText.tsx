@@ -6,7 +6,7 @@ import styles from './TitleTextStyle';
 import { TitleTextProps } from './TitleTextInterfaces';
 
 const TitleText: FC<TitleTextProps> = ({ children, style }) => {
-  return <Text style={{ ...styles.title, ...style }}>{children}</Text>
+  return <Text style={{ ...styles.title, ...style }}>{children}</Text>;
 };
 
 export default TitleText;
