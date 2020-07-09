@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { View, Button, Image, Text } from 'react-native';
+import { View, Image, Text } from 'react-native';
 
 import styles from './GameOverScreenStyle';
 
