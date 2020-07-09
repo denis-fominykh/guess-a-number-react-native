@@ -6,6 +6,7 @@ import styles from './GameOverScreenStyle';
 import { GameOverScreenProps } from './GameOverScreenInterfaces';
 import TitleText from '../../components/TitleText';
 import BodyText from '../../components/BodyText';
+import MainButton from '../../components/MainButton';
 
 const GameOverScreen: FC<GameOverScreenProps> = ({
   rounds,
@@ -28,7 +29,7 @@ const GameOverScreen: FC<GameOverScreenProps> = ({
           <Text style={styles.highlight}>{userNumber}</Text>.
         </BodyText>
       </View>
-      <Button title="NEW GAME" onPress={onRestart} />
+      <MainButton onPress={onRestart}>NEW GAME</MainButton>
     </View>
   );
 };

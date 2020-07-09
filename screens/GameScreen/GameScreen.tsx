@@ -8,6 +8,7 @@ import { generateRandomBetween } from '../../services/generateRandomBetween';
 import BodyText from '../../components/BodyText';
 import NumberContainer from '../../components/NumberContainer';
 import Card from '../../components/Card';
+import MainButton from '../../components/MainButton';
 
 const GameScreen: FC<GameScreenProps> = ({ userChoice, onGameOver }) => {
   const [currentGuess, setCurrentGuess] = useState<number>(
@@ -55,8 +56,10 @@ const GameScreen: FC<GameScreenProps> = ({ userChoice, onGameOver }) => {
       <BodyText>Opponent's Guess</BodyText>
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card style={styles.buttonContainer}>
-        <Button title="LOWER" onPress={() => nextGuessHandler('lover')} />
-        <Button title="GREATER" onPress={() => nextGuessHandler('greater')} />
+        <MainButton onPress={() => nextGuessHandler('lover')}>LOWER</MainButton>
+        <MainButton onPress={() => nextGuessHandler('greater')}>
+          GREATER
+        </MainButton>
       </Card>
     </View>
   );

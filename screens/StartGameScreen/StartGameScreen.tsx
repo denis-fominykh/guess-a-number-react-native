@@ -15,6 +15,7 @@ import BodyText from '../../components/BodyText';
 import TitleText from '../../components/TitleText';
 import Input from '../../components/Input';
 import NumberContainer from '../../components/NumberContainer';
+import MainButton from '../../components/MainButton';
 import Colors from '../../constants/colors';
 
 const StartGameScreen: FC<StartGameScreenProps> = ({ onStartGame }) => {
@@ -54,10 +55,9 @@ const StartGameScreen: FC<StartGameScreenProps> = ({ onStartGame }) => {
       <Card style={styles.summaryContainer}>
         <BodyText>You selected</BodyText>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button
-          title="START GAME"
-          onPress={() => onStartGame(selectedNumber)}
-        />
+        <MainButton onPress={() => onStartGame(selectedNumber)}>
+          START GAME
+        </MainButton>
       </Card>
     ) : null;
 
@@ -66,7 +66,7 @@ const StartGameScreen: FC<StartGameScreenProps> = ({ onStartGame }) => {
       <View style={styles.screen}>
         <TitleText style={styles.title}>Start a New Game!</TitleText>
         <Card style={styles.inputContainer}>
-          <BodyText>Select a number</BodyText>
+          <BodyText>Select a Number</BodyText>
           <Input
             inputStyle={styles.input}
             blurOnSubmit={true}
