@@ -1,4 +1,6 @@
-# Guess a number app
+# The Guess a Number app
+
+![srcreens](./assets/devices_screens.png)
 
 This project was bootstrapped with [Expo](https://expo.io/).
 
