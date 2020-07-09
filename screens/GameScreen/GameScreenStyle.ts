@@ -13,6 +13,13 @@ const styles = StyleSheet.create({
     width: 400,
     maxWidth: '90%',
   },
+  listContainer: {
+    flex: 1,
+    width: '80%',
+  },
+  list: {
+    alignItems: 'center',
+  },
 });
 
 export default styles;
