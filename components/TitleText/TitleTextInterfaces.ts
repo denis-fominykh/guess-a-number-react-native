@@ -1,7 +1,7 @@
 import React from 'react';
-import { ViewStyle } from 'react-native';
+import { ViewStyle, TextStyle } from 'react-native';
 
 export interface TitleTextProps {
   children: React.ReactNode;
-  style?: ViewStyle;
+  style?: ViewStyle | TextStyle;
 }

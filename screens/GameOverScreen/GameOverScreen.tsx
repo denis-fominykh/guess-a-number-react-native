@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { View, Button, Image } from 'react-native';
+import { View, Button, Image, Text } from 'react-native';
 
 import styles from './GameOverScreenStyle';
 
@@ -21,8 +21,13 @@ const GameOverScreen: FC<GameOverScreenProps> = ({
           source={require('../../assets/success.png')}
         />
       </View>
-      <BodyText>Rounds: {rounds}</BodyText>
-      <BodyText>The number was: {userNumber}</BodyText>
+      <View style={styles.resultContainer}>
+        <BodyText style={styles.resultText}>
+          Your phone needed <Text style={styles.highlight}>{rounds}</Text>{' '}
+          rounds to guess the number{' '}
+          <Text style={styles.highlight}>{userNumber}</Text>.
+        </BodyText>
+      </View>
       <Button title="NEW GAME" onPress={onRestart} />
     </View>
   );
