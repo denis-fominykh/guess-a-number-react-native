@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
   screen: {
@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'space-between',
     paddingHorizontal: 15,
+  },
+  button: {
+    width: Dimensions.get('window').width / 4,
   },
   summaryContainer: {
     marginTop: 20,

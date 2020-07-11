@@ -78,16 +78,20 @@ const StartGameScreen: FC<StartGameScreenProps> = ({ onStartGame }) => {
             value={enteredValue}
           />
           <View style={styles.buttonContainer}>
-            <Button
-              title="Reset"
-              onPress={resetInputHandler}
-              color={Colors.accent}
-            />
-            <Button
-              title="Confirm"
-              onPress={confirmInputHandler}
-              color={Colors.primary}
-            />
+            <View style={styles.button}>
+              <Button
+                title="Reset"
+                onPress={resetInputHandler}
+                color={Colors.accent}
+              />
+            </View>
+            <View style={styles.button}>
+              <Button
+                title="Confirm"
+                onPress={confirmInputHandler}
+                color={Colors.primary}
+              />
+            </View>
           </View>
         </Card>
         {confirmedOutput}
