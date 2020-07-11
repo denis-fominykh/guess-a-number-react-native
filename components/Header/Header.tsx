@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import styles from './HeaderStyle';
 
-import { HeaderProps } from './HeaderInterfaces';
+import { HeaderProps } from '../../interfaces/IHeader';
 import TitleText from '../TitleText';
 
 const Header: FC<HeaderProps> = ({ title }) => {

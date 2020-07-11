@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import styles from './CardStyle';
 
-import { CardProps } from './CardInterfaces';
+import { CardProps } from '../../interfaces/ICard';
 
 const Card: FC<CardProps> = ({ children, style }) => {
   return <View style={{ ...styles.card, ...style }}>{children}</View>;

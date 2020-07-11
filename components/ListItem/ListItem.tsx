@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import styles from './ListItemStyle';
 
-import { ListItemProps } from './ListItemInterfaces';
+import { ListItemProps } from '../../interfaces/IListItem';
 import BodyText from '../BodyText';
 
 const ListItem: FC<ListItemProps> = ({ value, index }) => {

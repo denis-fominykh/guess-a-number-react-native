@@ -3,7 +3,7 @@ import { TextInput } from 'react-native';
 
 import styles from './InputStyle';
 
-import { InputProps } from './InputInterfaces';
+import { InputProps } from '../../interfaces/IInput';
 
 const Input: FC<InputProps> = ({
   inputStyle,

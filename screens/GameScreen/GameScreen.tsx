@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import styles from './GameScreenStyle';
 
-import { GameScreenProps } from './GameScreenInterfaces';
+import { GameScreenProps } from '../../interfaces/IGameScreen';
 import { generateRandomBetween } from '../../services/generateRandomBetween';
 import BodyText from '../../components/BodyText';
 import NumberContainer from '../../components/NumberContainer';

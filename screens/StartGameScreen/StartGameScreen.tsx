@@ -9,7 +9,7 @@ import {
 
 import styles from './StartGameScreenStyle';
 
-import { StartGameScreenProps } from './StartGameScreenInterfaces';
+import { StartGameScreenProps } from '../../interfaces/IStartGameScreen';
 import Card from '../../components/Card';
 import BodyText from '../../components/BodyText';
 import TitleText from '../../components/TitleText';

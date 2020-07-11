@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 import styles from './NumberContainerStyle';
 
-import { NumberContainerProps } from './NumberContainerInterfaces';
+import { NumberContainerProps } from '../../interfaces/INumberContainer';
 
 const NumberContainer: FC<NumberContainerProps> = ({ children }) => {
   return (

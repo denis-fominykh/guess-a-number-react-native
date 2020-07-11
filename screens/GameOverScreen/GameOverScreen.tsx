@@ -3,7 +3,7 @@ import { View, Image, Text } from 'react-native';
 
 import styles from './GameOverScreenStyle';
 
-import { GameOverScreenProps } from './GameOverScreenInterfaces';
+import { GameOverScreenProps } from '../../interfaces/IGameOverScreen';
 import TitleText from '../../components/TitleText';
 import BodyText from '../../components/BodyText';
 import MainButton from '../../components/MainButton';

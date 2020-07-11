@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
 import styles from './MainButtonStyle';
-import { MainButtonProps } from './MainButtonInterfaces';
+import { MainButtonProps } from '../../interfaces/IMainButton';
 
 const MainButton: FC<MainButtonProps> = ({ children, onPress }) => {
   return (
