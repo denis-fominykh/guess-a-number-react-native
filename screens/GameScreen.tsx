@@ -1,16 +1,14 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
-import { View, Alert, ScrollView } from 'react-native';
+import { View, Alert, ScrollView, StyleSheet, Dimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-import styles from './GameScreenStyle';
-
-import { GameScreenProps } from '../../interfaces/IGameScreen';
-import { generateRandomBetween } from '../../services/generateRandomBetween';
-import BodyText from '../../components/BodyText';
-import NumberContainer from '../../components/NumberContainer';
-import Card from '../../components/Card';
-import MainButton from '../../components/MainButton';
-import ListItem from '../../components/ListItem';
+import { GameScreenProps } from '../interfaces/IGameScreen';
+import { generateRandomBetween } from '../services/generateRandomBetween';
+import BodyText from '../components/BodyText';
+import NumberContainer from '../components/NumberContainer';
+import Card from '../components/Card';
+import MainButton from '../components/MainButton';
+import ListItem from '../components/ListItem';
 
 const GameScreen: FC<GameScreenProps> = ({ userChoice, onGameOver }) => {
   const initialGuess = generateRandomBetween(1, 100, userChoice);
@@ -84,5 +82,27 @@ const GameScreen: FC<GameScreenProps> = ({ userChoice, onGameOver }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    padding: 10,
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: Dimensions.get('window').height > 600 ? 20 : 5,
+    width: 400,
+    maxWidth: '90%',
+  },
+  listContainer: {
+    flex: 1,
+    width: Dimensions.get('window').width > 350 ? '60%' : '80%',
+  },
+  list: {
+    alignItems: 'center',
+  },
+});
 
 export default GameScreen;
