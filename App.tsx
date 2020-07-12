@@ -1,9 +1,7 @@
 import React, { FC, useState } from 'react';
-import { View } from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { AppLoading } from 'expo';
-
-import styles from './AppStyle';
 
 import { fetchFonts } from './services/fetchFonts';
 import Header from './components/Header';
@@ -63,5 +61,11 @@ const App: FC = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+  },
+});
 
 export default App;
