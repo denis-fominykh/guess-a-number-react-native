@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import {StyleSheet, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { AppLoading } from 'expo';
 
